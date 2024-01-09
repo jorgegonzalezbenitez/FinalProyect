@@ -13,7 +13,9 @@ To execute the application I pass the following modules as arguments: For the fo
 
 ## _Functionality_
 
-The software is responsible for acquiring and storing both meteorological data and the availability of hotels in different locations in Spain. It relies on a weather service provider (OpenWeatherMap) and for hotels it uses an API (Xotelo) to obtain the information and send it to the broker that acts as an intermediary, and write the received events in a directory (datalake), and also save it in a database (datamart) to be able to manage information in real time for quick queries. Finally, I implement a user interface using a CLI to interact with the user. This process occurs every 6 hours to update the latest forecasts for both events but the user interface can be used whenever desired.
+The software is responsible for acquiring and storing both meteorological data and the availability of hotels in different locations in Spain. It relies on a weather service provider (OpenWeatherMap) and for hotels it uses an API (Xotelo) to obtain the information and send it to the broker that acts as an intermediary, and write the received events in a directory (datalake), and also save it in a database (datamart) to be able to manage information in real time for quick queries. Finally, I implement a user interface using a CLI to interact with the user. This process occurs every 6 hours to update the latest forecasts for both events but the user interface can be used whenever desired. I wanted to add that in github, the datalake-builder module stays with the name event-store-builder, but in Intellij it appears like this:
+<img width="219" alt="image" src="https://github.com/jorgegonzalezbenitez/FinalProyect/assets/145259600/38a6c8b2-f242-4cff-a42d-60de62b82170">
+
 
 ## _Resources Used_
 
