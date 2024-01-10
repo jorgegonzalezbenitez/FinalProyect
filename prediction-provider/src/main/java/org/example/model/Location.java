@@ -1,5 +1,4 @@
 package org.example.model;
-
 public class Location {
     private final String name;
     private final double lat;
