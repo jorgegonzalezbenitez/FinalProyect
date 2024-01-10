@@ -9,12 +9,17 @@ Universidad Las Palmas de Gran Canaria
 
 ## _Execution_
 
-To execute the application I pass the following modules as arguments: For the four modules I pass the connection from my computer to ActiveMQ, and in the datalake module I simply pass the root of the directory, that is, the user can locate the directory at your mercy but you cannot change its structure internally. I also wanted to point out that I set the database address for my computer.
+To execute the application I pass the following modules as arguments: In the prediction-provider module, the API Key is passed as the first argument, and the connection to ActiveMq as the second. In the hotel-provider module, only the connection to ActiveMq is passed. For the datalake-builder module, It passes the connection to ActiveMq as the first argument, and as the second the root of the directory where the user wants to locate it but without internally changing the requested structure. Finally, in the holiday-business-units module, the connection to ActiveMq is passed as the first argument, and as the second the url where the user wishes to locate the database.
+
+I wanted to add that in github, the datalake-builder module stays with the name event-store-builder, but in Intellij it appears like this:
+<img width="219" alt="image" src="https://github.com/jorgegonzalezbenitez/FinalProyect/assets/145259600/38a6c8b2-f242-4cff-a42d-60de62b82170">
+
+
+ 
 
 ## _Functionality_
 
-The software is responsible for acquiring and storing both meteorological data and the availability of hotels in different locations in Spain. It relies on a weather service provider (OpenWeatherMap) and for hotels it uses an API (Xotelo) to obtain the information and send it to the broker that acts as an intermediary, and write the received events in a directory (datalake), and also save it in a database (datamart) to be able to manage information in real time for quick queries. Finally, I implement a user interface using a CLI to interact with the user. This process occurs every 6 hours to update the latest forecasts for both events but the user interface can be used whenever desired. I wanted to add that in github, the datalake-builder module stays with the name event-store-builder, but in Intellij it appears like this:
-<img width="219" alt="image" src="https://github.com/jorgegonzalezbenitez/FinalProyect/assets/145259600/38a6c8b2-f242-4cff-a42d-60de62b82170">
+The software is responsible for acquiring and storing both meteorological data and the availability of hotels in different locations in Spain. It relies on a weather service provider (OpenWeatherMap) and for hotels it uses an API (Xotelo) to obtain the information and send it to the broker that acts as an intermediary, and write the received events in a directory (datalake), and also save it in a database (datamart) to be able to manage information in real time for quick queries. Finally, I implement a user interface using a CLI to interact with the user. This process occurs every 6 hours to update the latest forecasts for both events but the user interface can be used whenever desired. 
 
 
 ## _Resources Used_
