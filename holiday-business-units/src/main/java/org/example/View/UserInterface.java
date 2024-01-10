@@ -14,7 +14,6 @@ public class UserInterface {
     }
 
     public void execute( ){
-        commandSet = new Command();
         System.out.println("--------------------------------------------");
         System.out.println("     Bienvenido al sistema de Reservas!");
 
@@ -93,7 +92,7 @@ public class UserInterface {
     private String selectCountry() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Seleccione la localización de España deseada para visitar:");
+        System.out.println("Selecciona la localización de España que quieres visitar:");
         System.out.println("1. Madrid");
         System.out.println("2. Barcelona");
         System.out.println("3. Sevilla");

@@ -10,8 +10,8 @@ public class Command implements CommandSet {
 
     private static  String path;
 
-    public Command() {
-        this.path = "jdbc:sqlite:C:\\Users\\cgsos\\Downloads\\DataBase\\datamart.db";
+    public Command(String path) {
+        this.path = path;
     }
 
     @Override

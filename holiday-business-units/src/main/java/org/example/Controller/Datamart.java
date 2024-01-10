@@ -13,8 +13,8 @@ import java.time.format.DateTimeFormatter;
 
 public class Datamart implements DatabaseStore {
     private final String path;
-    public Datamart() {
-        this.path = "jdbc:sqlite:C:\\Users\\cgsos\\Downloads\\DataBase\\datamart.db";
+    public Datamart(String path) {
+        this.path = path;
     }
 
     @Override

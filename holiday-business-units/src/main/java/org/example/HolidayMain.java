@@ -12,15 +12,14 @@ public class HolidayMain {
 
     public static void main(String[] args) throws JMSException {
         Consumer subscriber = new RealTimeConsumer(args[0]);
-        Datamart databaseStore = new Datamart();
+        Datamart databaseStore = new Datamart(args[1]);
         subscriber.start(databaseStore);
         try{
-            //Espero 5 segundos a que se cree la base de datos
             TimeUnit.SECONDS.sleep(5);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        CommandSet commandset = new Command();
+        CommandSet commandset = new Command(args[1]);
         UserInterface userInterface = new UserInterface(commandset);
         userInterface.execute();
 
