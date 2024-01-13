@@ -15,7 +15,7 @@ To execute the application I pass the following modules as arguments: In the pre
 
 ## _Functionality_
 
-The software is responsible for acquiring and storing both meteorological data and the availability of hotels in different locations in Spain. It relies on a weather service provider (OpenWeatherMap) and for hotels it uses an API (Xotelo) to obtain the information and send it to the broker that acts as an intermediary, and write the received events in a directory (datalake), and also save it in a database (datamart) to be able to manage information in real time for quick queries. Finally, I implement a user interface using a CLI to interact with the user. This process occurs every 6 hours to update the latest forecasts for both events but the user interface can be used whenever desired.
+The software is responsible for acquiring and storing both meteorological data and the availability of hotels in different locations in Spain. It relies on a weather service provider (OpenWeatherMap) and for hotels it uses an API (Xotelo) to obtain the information and send it to the broker that acts as an intermediary, and write the received events in a directory (datalake), and also save it in a database (datamart) to be able to manage information in real time for quick queries. Finally, I implement a user interface using a CLI and provides information to the user about the average weather forecasts and also the best offer for each selected hotel in each location (Three per location) during the days that the user decides. This process occurs every 6 hours to update the latest forecasts for both events but the user interface can be used whenever desired.
 
 ## _Resources Used_
 
